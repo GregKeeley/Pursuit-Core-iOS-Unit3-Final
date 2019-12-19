@@ -37,7 +37,7 @@ class ElementDetailViewController: UIViewController {
         meltingPointLabel.text = ("Boiling Point: \(element?.melt?.description ?? "N/A")")
         discoverdByLabel.text = element?.discoveredBy
         descriptionTextView.text = element?.summary
-        elementImage.getImage(with: "http://images-of-elements.com/\(String(describing: element?.name.lowercased() ?? "argon")).jpg") { [weak self] (result) in
+        elementImage.getImage(with: "http://images-of-elements.com/\(String(describing: element?.name?.lowercased() ?? "argon")).jpg") { [weak self] (result) in
             switch result {
             case .failure(let appError):
                 print("error: \(appError)")

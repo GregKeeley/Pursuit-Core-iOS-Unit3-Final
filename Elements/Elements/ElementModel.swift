@@ -9,7 +9,7 @@
 import Foundation
 
 struct Element: Codable {
-    let name: String
+    let name: String?
     let atomicMass: Double
     let boil: Double?
     let discoveredBy: String?

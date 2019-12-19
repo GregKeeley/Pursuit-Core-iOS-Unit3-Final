@@ -22,10 +22,11 @@ class ElementsViewController: UIViewController {
    //MARK: ViewDidLoad
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     tableView.dataSource = self
     loadData()
   }
-    //MARK: LoadData
+    //MARK: Funcs
     func loadData() {
         ElementAPI.getElements(completion: { [weak self] (result) in
             switch result {
@@ -38,6 +39,7 @@ class ElementsViewController: UIViewController {
             }
         })
     }
+
 //MARK: PrepareForSegue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let elementDVC = segue.destination as? ElementDetailViewController,
@@ -61,5 +63,12 @@ extension ElementsViewController: UITableViewDataSource {
         let element = elements[indexPath.row]
         cell.configureCell(for: element)
         return cell
+    }
+}
+
+extension ElementsViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        
     }
 }

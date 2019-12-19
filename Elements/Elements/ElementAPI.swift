@@ -10,7 +10,7 @@ import Foundation
 
 struct ElementAPI {
     
-    //MARK GET Elements
+    //MARK: GET Elements
     static func getElements(completion: @escaping (Result<[Element], AppError>) -> ()) {
         let elementEndpointURL = "https://5c1d79abbc26950013fbcaa9.mockapi.io/api/v1/elements"
         guard let url = URL(string: elementEndpointURL) else {
@@ -32,6 +32,8 @@ struct ElementAPI {
             }
         }
     }
+    
+    
     
     // MARK: POST Favorite
     static func postFavorite(element: Element, completion: @escaping (Result<Bool, AppError>) -> ()) {
@@ -84,3 +86,4 @@ struct ElementAPI {
     }
     
 }
+

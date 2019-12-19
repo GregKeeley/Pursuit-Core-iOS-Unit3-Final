@@ -13,6 +13,7 @@
 		5734756921DA90C800FB6177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5734756821DA90C800FB6177 /* Assets.xcassets */; };
 		5734756C21DA90C800FB6177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5734756A21DA90C800FB6177 /* LaunchScreen.storyboard */; };
 		C1257D5923ABFB88009A0C50 /* UIViewController Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1257D5823ABFB88009A0C50 /* UIViewController Extension.swift */; };
+		C1257D5D23AC0473009A0C50 /* FavoriteElementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1257D5C23AC0473009A0C50 /* FavoriteElementsViewController.swift */; };
 		C12F75B623ABCCC800A14874 /* ElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12F75B523ABCCC800A14874 /* ElementCell.swift */; };
 		C12F75B823ABCCF500A14874 /* ElementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12F75B723ABCCF500A14874 /* ElementDetailViewController.swift */; };
 		C12F75BA23ABCFBB00A14874 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12F75B923ABCFBB00A14874 /* NetworkHelper.swift */; };
@@ -43,6 +44,7 @@
 		5734756B21DA90C800FB6177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5734756D21DA90C800FB6177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1257D5823ABFB88009A0C50 /* UIViewController Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController Extension.swift"; sourceTree = "<group>"; };
+		C1257D5C23AC0473009A0C50 /* FavoriteElementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteElementsViewController.swift; sourceTree = "<group>"; };
 		C12F75B523ABCCC800A14874 /* ElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCell.swift; sourceTree = "<group>"; };
 		C12F75B723ABCCF500A14874 /* ElementDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementDetailViewController.swift; sourceTree = "<group>"; };
 		C12F75B923ABCFBB00A14874 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		C12F75B023ABCC5900A14874 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C1257D5C23AC0473009A0C50 /* FavoriteElementsViewController.swift */,
 				5734756321DA90C700FB6177 /* ElementsViewController.swift */,
 				C12F75B723ABCCF500A14874 /* ElementDetailViewController.swift */,
 			);
@@ -284,6 +287,7 @@
 				C12F75BE23ABCFD200A14874 /* AppError.swift in Sources */,
 				C1257D5923ABFB88009A0C50 /* UIViewController Extension.swift in Sources */,
 				C12F75C223ABCFF500A14874 /* String Extension.swift in Sources */,
+				C1257D5D23AC0473009A0C50 /* FavoriteElementsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
