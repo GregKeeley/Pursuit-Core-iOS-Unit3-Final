@@ -28,6 +28,7 @@ class ElementDetailViewController: UIViewController {
         descriptionTextView.isEditable = false
         loadData()
     }
+    
     func loadData() {
         navigationItem.title = element?.name
         symbolLabel.text = element?.symbol

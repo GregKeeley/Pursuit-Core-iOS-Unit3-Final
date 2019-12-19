@@ -32,7 +32,27 @@ struct ElementAPI {
             }
         }
     }
-    
+    static func getAdditionalElements(completion: @escaping (Result<[Element], AppError>) -> ()) {
+        let elementEndpointURL = "https://5c1d79abbc26950013fbcaa9.mockapi.io/api/v1/elements_remaining"
+        guard let url = URL(string: elementEndpointURL) else {
+            completion(.failure(.badURL(elementEndpointURL)))
+            return
+        }
+        let request = URLRequest(url: url)
+        NetworkHelper.shared.performDataTask(with: request) { (result) in
+            switch result {
+            case .failure(let appError):
+                completion(.failure(appError))
+            case .success(let data):
+                do {
+                    let elements = try JSONDecoder().decode([Element].self, from: data)
+                    completion(.success(elements))
+                } catch {
+                    completion(.failure(.decodingError(error)))
+                }
+            }
+        }
+    }
     
     
     // MARK: POST Favorite
