@@ -19,9 +19,9 @@ class ElementCell: UITableViewCell {
     func configureCell(for element: Element) {
         nameLabel.text = element.name
         symbolLabel.text = element.symbol
-        weightLabel.text = " \(String(format: "%0.4f", (element.atomicMass)))"
+        weightLabel.text = " \(String(format: "%0.4f", (element.atomicMass ?? "N/A" )))"
         numberLabel.text = element.number.description
-        elementImage.getImage(with: "http://www.theodoregray.com/periodictable/Tiles/\(String(format: "%03d",(element.number)))/s7.JPG") { [weak self] (result) in
+        elementImage.getImage(with: "http://www.theodoregray.com/periodictable/Tiles/\(String(format: "%03d",(element.number )))/s7.JPG") { [weak self] (result) in
             switch result {
             case .failure(let appError):
                 print("error: \(appError)")

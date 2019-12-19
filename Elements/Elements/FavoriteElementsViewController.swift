@@ -21,6 +21,7 @@ class FavoriteElementsViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
         loadData()
     }
     
@@ -33,6 +34,7 @@ class FavoriteElementsViewController: UIViewController {
                 }
             case .success(let elements):
                 self?.favoriteElements = elements
+                dump(elements)
             }
         }
     }
