@@ -11,20 +11,19 @@ import Foundation
 struct Element: Codable {
     let name: String
     let atomicMass: Double
-    let boil: Double
-    let discoveredBy: String
-    let melt: Double
+    let boil: Double?
+    let discoveredBy: String?
+    let melt: Double?
     let number: Int
     let summary: String
     let symbol: String
-    
     let category: String
     let period: Double
-    let molarHeat: Double
+    let molarHeat: Double?
     let phase: String
     let source: String
-    let appearance: String
-    let density: Double
+    let appearance: String?
+    let density: Double?
     let favoritedBy: String?
 
     enum CodingKeys: String, CodingKey {
@@ -45,4 +44,5 @@ struct Element: Codable {
         case density
         case favoritedBy
     }
+    
 }

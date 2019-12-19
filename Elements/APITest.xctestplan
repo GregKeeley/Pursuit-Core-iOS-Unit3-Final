@@ -1,0 +1,18 @@
+{
+  "configurations" : [
+    {
+      "id" : "C004D1D7-6CC3-4299-8074-673673F87A15",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+
+  ],
+  "version" : 1
+}
