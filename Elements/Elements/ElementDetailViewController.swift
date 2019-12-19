@@ -12,7 +12,7 @@ class ElementDetailViewController: UIViewController {
 
     
     @IBOutlet weak var elementImage: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var symbolLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var boilingPointLabel: UILabel!
@@ -29,9 +29,9 @@ class ElementDetailViewController: UIViewController {
         loadData()
     }
     func loadData() {
-        navigationController?.title = element?.name
-        nameLabel.text = element?.name
-        numberLabel.text = ("No. \(element?.number.description ?? "N/A")")
+        navigationItem.title = element?.name
+        symbolLabel.text = element?.symbol
+        numberLabel.text = element?.number.description ?? "N/A"
         weightLabel.text = ("Mass: \(element?.atomicMass.description ?? "N/A")")
         boilingPointLabel.text = ("Boiling Point: \(element?.boil?.description ?? "N/A")")
         meltingPointLabel.text = ("Boiling Point: \(element?.melt?.description ?? "N/A")")
